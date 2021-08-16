@@ -392,6 +392,6 @@ public class Vec3 implements Matrixable {
 	@Override
 	public String toString() {
 		double precision = 1000D;
-		return "Vec3 [x=" + Math.round(x * precision) / precision + ", y=" + Math.round(y * precision) / precision + ", z=" + Math.round(z * precision) / precision + "]";
+		return "(" + Math.round(x * precision) / precision + "," + Math.round(y * precision) / precision + "," + Math.round(z * precision) / precision + ")";
 	}
 }
