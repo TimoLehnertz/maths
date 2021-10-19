@@ -6,6 +6,18 @@ public class Quaternion extends Rotation{
 		super();
 	}
 	
+	public Quaternion(String s) {
+		super();
+		String split[] = s.split(",");
+		if(split.length < 4) {
+			return;
+		}
+		w = Double.parseDouble(split[0]);
+		x = Double.parseDouble(split[1]);
+		y = Double.parseDouble(split[2]);
+		z = Double.parseDouble(split[3]);
+	}
+	
 	public Quaternion(Vec3 v) {
 		super();
 		setFrom(v);

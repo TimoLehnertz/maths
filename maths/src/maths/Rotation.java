@@ -74,6 +74,7 @@ public abstract class Rotation {
 	
 	@Override
 	public String toString() {
-		return getName() + " (w=" + w +"|x=" + x + "|y=" + y + "|z="+ z +  ")";
+//		return getName() + " (w=" + w +"|x=" + x + "|y=" + y + "|z="+ z +  ")";
+		return "," + w + "," + x + "," + y + "," + z;
 	}
 }

@@ -344,6 +344,15 @@ public class Vec3 implements Matrixable {
 		return v.x == x && v.y == y && v.z == z;
 	}
 	
+	public void set(int axis, double val) {
+		switch(axis) {
+		case 0: x = val; return;
+		case 1: y = val; return;
+		case 2: z = val; return;
+		default: return;
+		}
+	}
+	
 	public void setFromString(String s) {
 		s = s.substring(1, s.length() - 1);
 		String split[] = s.split("\\|");
