@@ -355,7 +355,7 @@ public class Vec3 implements Matrixable {
 	
 	public void setFromString(String s) {
 		s = s.substring(1, s.length() - 1);
-		String split[] = s.split("\\|");
+		String split[] = s.split("\\,");
 		if(split.length > 2) {
 			x = Double.parseDouble(split[0]);
 			y = Double.parseDouble(split[1]);
@@ -400,7 +400,7 @@ public class Vec3 implements Matrixable {
 	
 	@Override
 	public String toString() {
-		double precision = 1000D;
-		return "(" + Math.round(x * precision) / precision + "," + Math.round(y * precision) / precision + "," + Math.round(z * precision) / precision + ")";
+		double precision = 10000D;
+		return "," + Math.round(x * precision) / precision + "," + Math.round(y * precision) / precision + "," + Math.round(z * precision) / precision + ",";
 	}
 }

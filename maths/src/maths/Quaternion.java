@@ -1,6 +1,6 @@
 package maths;
 
-public class Quaternion extends Rotation{
+public class Quaternion extends Rotation {
 	
 	public Quaternion() {
 		super();
@@ -172,7 +172,7 @@ public class Quaternion extends Rotation{
 	    w *= s;
 	}
 	
-	public void multiply(Quaternion q) {
+	public Quaternion multiply(Quaternion q) {
 		double x = this.x;
 		double y = this.y;
 		double z = this.z;
@@ -181,6 +181,7 @@ public class Quaternion extends Rotation{
 	    this.y = -x * q.z + y * q.w + z * q.x + w * q.y;
 	    this.z =  x * q.y - y * q.x + z * q.w + w * q.z;
 	    this.w = -x * q.x - y * q.y - z * q.z + w * q.w;
+	    return this;
 	}
 	
 	public Quaternion add(Quaternion q2) {
